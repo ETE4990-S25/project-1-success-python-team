@@ -1,0 +1,13 @@
+{
+    "name": "Eldrin",
+    "role": "Mage",
+    "health": 100,
+    "mana": 100,
+    "level": 1,
+    "stats": {
+        "strength": 3,
+        "agility": 3,
+        "intelligence": 10
+    },
+    "inventory": []
+}
