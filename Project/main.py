@@ -11,9 +11,20 @@ def choose_player_type():
     print("2. 🔥 Mage - Powerful magic user with high intelligence")
     print("3. 🗡 Rogue - Agile, fast, and critical hit specialist")
 
-    while True:
-        choice = input("Enter 1, 2, or 3: ").strip()
-        name = input("Enter your character name: ").strip()
+name = input("Enter your character name: ").strip()
+
+while True:
+    choice = input("Enter 1, 2, or 3: ").strip()
+    
+    if choice == "1":
+        return Warrior(name)
+    elif choice == "2":
+        return Mage(name)
+    elif choice == "3":
+        return Rogue(name)
+    else:
+        print("⚠ Invalid choice. Please enter 1, 2, or 3.")
+
         
         if choice == "1":
             return Warrior(name)
