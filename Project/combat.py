@@ -31,11 +31,17 @@ def generate_enemy(self):
         final_damage = max(base_damage - enemy_defense, 1)  # Ensure at least 1 damage
         return round(final_damage, 1)
 
-    def player_attack(self):
-        """Player's turn to attack."""
-        if random.randint(1, 100) <= self.enemy["evasion"]:  # Enemy dodges attack
-            print(f"💨 {self.enemy['name']} dodged the attack!")
-            return
+def warrior_crit(self, damage):
+    if random.randint(1, 100) <= 20:
+        print(f"{self.player.name} lands a **CRITICAL STRIKE** for double damage!")
+        self.enemy["health"] -= damage  # Extra hit
+
+def mage_fireball(self):
+    if self.player.mana >= 20:
+        print(f"{self.player.name} casts **Fireball** on {self.enemy['name']}!")
+        self.enemy["health"] -= 15
+        self.player.mana -= 20
+
         
         damage = self.calculate_damage(self.player.stats["strength"], self.enemy["defense"])
         self.enemy["health"] -= damage
