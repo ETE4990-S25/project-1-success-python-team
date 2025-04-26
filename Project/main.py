@@ -44,7 +44,16 @@ def main_menu():
     player.load_profile()
 
     # Load game difficulty settings
-    rules = GameRules("Normal")  # Change to "Easy" or "Hard" as needed
+def choose_difficulty():
+    print("\n🎚 Choose Difficulty: Easy, Normal, Hard")
+    while True:
+        difficulty = input("Enter difficulty: ").strip().capitalize()
+        if difficulty in ["Easy", "Normal", "Hard"]:
+            return difficulty
+        print("⚠ Invalid input. Try again.")
+
+rules = GameRules(choose_difficulty())
+
 
     # Create inventory and exploration generator
     inventory = Inventory()
