@@ -85,5 +85,10 @@ rules = GameRules(choose_difficulty())
             print("⚠ Invalid choice. Please try again.")
 
 if __name__ == "__main__":
+def start_game():
     main_menu()
+
+if __name__ == "__main__":
+    start_game()
+
 
