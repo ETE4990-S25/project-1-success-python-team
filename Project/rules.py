@@ -3,7 +3,12 @@ import os
 
 class GameRules:
     """Loads game difficulty settings from JSON."""
-    def __init__(self, difficulty="Normal", player_role="Warrior"):
+def __init__(self, difficulty="Normal", player_role="Warrior", filename="data/game_rules.json"):
+    self.difficulty = difficulty
+    self.player_role = player_role
+    self.filename = filename
+    self.load_rules()
+
         self.difficulty = difficulty
         self.player_role = player_role
         self.filename = "data/game_rules.json"
