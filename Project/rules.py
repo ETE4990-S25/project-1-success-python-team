@@ -22,7 +22,12 @@ def __init__(self, difficulty="Normal", player_role="Warrior", filename="data/ga
         try:
             with open(self.filename, "r") as f:
                 data = json.load(f)
-                self.__dict__.update(data.get(self.difficulty, {}))
+ruleset = data.get(self.difficulty, {})
+self.enemy_damage_multiplier = ruleset.get("enemy_damage_multiplier", 1.0)
+self.xp_multiplier = ruleset.get("xp_multiplier", 1.0)
+self.item_drop_rate = ruleset.get("item_drop_rate", 1.0)
+self.starting_gold = ruleset.get("starting_gold", 100)
+
                 self.apply_role_modifiers()
             print(f"🎮 Game Mode: {self.difficulty}, Role: {self.player_role}")
             print(f"⚔ Enemy Damage Multiplier: {self.enemy_damage_multiplier}")
