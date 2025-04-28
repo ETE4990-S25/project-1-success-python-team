@@ -1,0 +1,20 @@
+{
+    "Easy": {
+        "enemy_damage_multiplier": 0.8,
+        "xp_multiplier": 1.2,
+        "item_drop_rate": 1.5,
+        "starting_gold": 200
+    },
+    "Normal": {
+        "enemy_damage_multiplier": 1.0,
+        "xp_multiplier": 1.0,
+        "item_drop_rate": 1.0,
+        "starting_gold": 100
+    },
+    "Hard": {
+        "enemy_damage_multiplier": 1.5,
+        "xp_multiplier": 0.8,
+        "item_drop_rate": 0.7,
+        "starting_gold": 50
+    }
+}

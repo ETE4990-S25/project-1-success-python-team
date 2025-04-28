@@ -19,11 +19,11 @@ ENEMIES = [
 def generate_enemy(self):
     return random.choice(ENEMIES).copy()
 
-            {"name": "Goblin", "health": 50, "attack": 10, "defense": 2, "evasion": 5},
-            {"name": "Orc", "health": 80, "attack": 15, "defense": 4, "evasion": 3},
-            {"name": "Dark Mage", "health": 60, "attack": 12, "defense": 3, "evasion": 7}
-        ]
-        return random.choice(enemies)
+           {"name": "Goblin", "health": 50, "attack": 10, "defense": 2, "evasion": 5},
+           {"name": "Orc", "health": 80, "attack": 15, "defense": 4, "evasion": 3},
+           {"name": "Dark Mage", "health": 60, "attack": 12, "defense": 3, "evasion": 7}
+        
+    return random.choice(enemies)
 
     def calculate_damage(self, attacker_strength, enemy_defense):
         """Uses expressions to calculate attack damage dynamically."""
